@@ -1,9 +1,14 @@
 {
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "exports": "./index.js",
+    "type": "module"
   },
   "dependencies": {
+    "express": "^4.18.1",
+    "fetch": "^1.1.0",
     "inquirer": "^9.0.0",
-    "type": "module"
+    "latest": "^0.2.0",
+    "node": ">=14.16"
   }
 }

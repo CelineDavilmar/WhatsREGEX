@@ -1,6 +1,9 @@
-const inquirer = require('inquirer');
+//const fetch = require("node-fetch");
+//const inquirer = require('inquirer');
+//import fetch from "node-fetch";
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
+const inquirer = require("inquirer");
 
 
 const questions = [
@@ -197,7 +200,7 @@ function writeToFile(fileName, data) {
 
 function init() {
     inquirer.prompt(questions)
-        .then((inquirerResponse, data) => {
+        .then(function (inquirerResponse, data) {
             console.log("Creating Gist");
             writeToFile("./gist-template.md", generateMarkdown(inquirerResponse, data));
         })
